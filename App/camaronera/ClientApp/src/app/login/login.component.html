@@ -13,13 +13,14 @@
     <div id="formularioLogIn">
         <div id="source2"></div>
         <!--login form INICIO-->
-        <form action="" method="POST" class="formInt" id="formInt1">
+
+      <form id="formInt1">
             <div class="labelInputs mt-2 mb-2">
                 <label for="usuario">Usuario:</label>
                 <input type="text" id="usuario" class="inputs" name="usuario" placeholder="" requerid>
             </div>
             <div class="labelInputs mt-2 mb-2">
-                <label for="password"><span class="icon-lock-empty"></span>Contrase&ntildea:</label>
+                <label for="password"><span class="icon-lock-empty"></span>Contraseña:</label>
                 <input type="password" id="pass" class="inputs" name="password" placeholder="" requerid>
 
                 <div class="showPass">
@@ -30,6 +31,7 @@
             </div>
             <input type="submit" value="Iniciar Sesión" id="loginButton" name="submit" class="btn btn-primary mt-3 mb-3">
         </form>
+
     </div>
 
     <div id="formularioSigngIn" *ngIf="false">
