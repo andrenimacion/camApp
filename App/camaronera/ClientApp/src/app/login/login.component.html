@@ -1,0 +1,59 @@
+<div id="formActionA">
+
+    <div id="content" class="">
+
+        <div class="box-form" id="boxSign" *ngIf="false">
+            <p id="SignIn"><span class="icon-users"></span>Sign In</p>
+        </div>
+        <div class="box-form" id="boxLog">
+            <p id="LogIn"><span class="icon-user-add"></span>Log In</p>
+        </div>
+    </div>
+
+    <div id="formularioLogIn">
+        <div id="source2"></div>
+        <!--login form INICIO-->
+        <form action="" method="POST" class="formInt" id="formInt1">
+            <div class="labelInputs mt-2 mb-2">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" class="inputs" name="usuario" placeholder="" requerid>
+            </div>
+            <div class="labelInputs mt-2 mb-2">
+                <label for="password"><span class="icon-lock-empty"></span>Contrase&ntildea:</label>
+                <input type="password" id="pass" class="inputs" name="password" placeholder="" requerid>
+
+                <div class="showPass">
+                    <span class=" icon-eye-3 mt-2" id="eyeA" style="cursor:pointer;"></span>
+                    <span class=" icon-eye-off mt-2" id="eyeAa" style="cursor:pointer;"></span>
+                    <p class="note" id="sowerCasePass1"></p>
+                </div>
+            </div>
+            <input type="submit" value="Iniciar Sesión" id="loginButton" name="submit" class="btn btn-primary mt-3 mb-3">
+        </form>
+    </div>
+
+    <div id="formularioSigngIn" *ngIf="false">
+        <div id="source"></div>
+        <form action="php-modules/envioDatos.php" method="POST" class="formInt">
+            <div class="labelInputs mt-2 mb-2">
+                <label for="usuario2">Usuario:</label>
+                <input type="text" id="usuario2" class="inputs" name="usuario" placeholder="" requerid>
+            </div>
+            <div class="labelInputs mt-2 mb-2">
+                <label for="password2"><span class="icon-lock-open-empty"></span>Contrase&ntildea:</label>
+                <input type="password" id="password2" class="inputs" name="password" placeholder="" requerid>
+
+                <div class="showPass">
+                    <span class=" icon-eye-3 mt-2" id="eyeB" style="cursor:pointer;"></span>
+                    <span class=" icon-eye-off mt-2" id="eyeBa" style="cursor:pointer;"></span>
+                </div>
+                <label for="repassword"><span class="icon-lock-open-empty" id="tof"></span>Repite tu Contrase&ntildea:</label>
+                <input type="password" id="repassword" class="inputs" name="repassword" placeholder="" requerid>
+
+                <span class=" icon-eye-3 mt-2" id="eyeC" style="cursor:pointer;"></span>
+                <span class=" icon-eye-off mt-2" id="eyeCa" style="cursor:pointer;"></span>
+            </div>
+            <input type="submit" value="Registrarse" id="signButton" name="submit" class="btn btn-primary mt-3 mb-3">
+        </form>
+    </div>
+</div>
