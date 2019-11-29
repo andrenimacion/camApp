@@ -14,5 +14,12 @@ export class WebuserService {
   login(user: Iwebuser): Observable<boolean> {
     return this.http.post<boolean>(this.apiURL + "/login", user);
   }
-   
+
+  create(user: Iwebuser): Observable<Iwebuser> {
+    return this.http.post<Iwebuser>(this.apiURL + "/create", user);
+  }
+
+  //create(userInfo: Iwebuser): Observable<Iwebuser> {
+  //  return this.http.post<Iwebuser>(this.apiURL + "/create", userInfo);
+  //}
 }
