@@ -1,22 +1,6 @@
 <body>
-  <div class="container-fluid" id="container-body">
-    <router-outlet></router-outlet>
-  </div>
-  <script type="text/javascript">
-    let wScreen = Number(window.screen.height);
-    let valueEccess = Number(111);
-    let totalScreen = Number(wScreen - valueEccess);
-
-    let containerBody = document.getElementById('container-body');
-    console.log(wScreen);
-
-
-    function screenHeight(a) {
-      containerBody.style.height = a;
-    }
-
-    screenHeight(`${totalScreen}px`);
-
-  </script>
+    <app-sup-header></app-sup-header>
+    <div class="container-fluid" id="container-body">
+        <router-outlet></router-outlet>
+    </div>
 </body>
-

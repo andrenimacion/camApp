@@ -7,12 +7,17 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LogotipoComponent } from './logotipo/logotipo.component';
+import { SupHeaderComponent } from './sup-header/sup-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    LogotipoComponent,
+    SupHeaderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -21,7 +26,10 @@ import { LoginComponent } from './login/login.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'login', component: LoginComponent },
-    ])
+      { path: 'logotipo', component: LogotipoComponent },
+      { path: 'sup-header', component: SupHeaderComponent },
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
