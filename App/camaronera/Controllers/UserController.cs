@@ -37,7 +37,7 @@ namespace camaronera.Controllers
 
         [HttpPost]
         [Route("login")]
-        public async Task<Boolean> Login([FromBody] WebUser userInfo)
+        public async Task<IActionResult> Login([FromBody] WebUser userInfo)
         {
             
             var result = await _context.WebUser.FirstOrDefaultAsync(x =>
@@ -45,12 +45,12 @@ namespace camaronera.Controllers
 
             if (result != null)
             {
-                return true;
+                return Ok(result);
             }
             else
             {
                 //ModelState.AddModelError(string.Empty, "Usuario o contraseña invalido");
-                return false;
+                return BadRequest("Datos incorrectos");
             }
         }            
     }
