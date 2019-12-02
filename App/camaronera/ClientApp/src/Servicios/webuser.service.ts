@@ -11,15 +11,33 @@ export class WebuserService {
   private apiURL = this.baseUrl + "api/User";
   constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) { }
     
-  login(user: Iwebuser): Observable<boolean> {
-    return this.http.post<boolean>(this.apiURL + "/login", user);
+  login(user: Iwebuser): Observable<Iwebuser> {
+    return this.http.post<Iwebuser>(this.apiURL + "/login", user);
   }
 
   create(user: Iwebuser): Observable<Iwebuser> {
     return this.http.post<Iwebuser>(this.apiURL + "/create", user);
   }
 
-  //create(userInfo: Iwebuser): Observable<Iwebuser> {
-  //  return this.http.post<Iwebuser>(this.apiURL + "/create", userInfo);
-  //}
+  logout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("tokenExpiration");
+  }
+
+  estaLogueado(): boolean {
+
+    var exp = this.obtenerExistenciaToken();
+
+    if (!exp) {
+      // el token no existe
+      return false;
+    }
+     else {
+      return true;
+    }
+  }
+
+  obtenerExistenciaToken(): string {
+    return localStorage.getItem("token");
+  }
 }

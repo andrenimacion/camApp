@@ -23,7 +23,9 @@ import { WebuserService } from 'src/Servicios/webuser.service';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'home', component: HomeComponent},
       { path: 'login', component: LoginComponent },
+      { path: '**', pathMatch: 'full', redirectTo:'home'  },
     ])
   ],
   providers: [WebuserService],
