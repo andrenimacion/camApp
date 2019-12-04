@@ -1,0 +1,45 @@
+#camaronera{
+    width: 185px;
+    height: 185px;
+    border-radius: 15px;
+    background-color: rgb(203, 219, 233);
+    transition: ease 1s all;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(66, 66, 66);
+    padding-top: 25px;
+}
+
+
+#icon-cam{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image{
+    width: 100%;
+    height: auto;
+}
+
+#camaronera:hover{
+    transition:ease all 0.5s;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#add{
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+    transition: ease all 0.5s;
+}
+
+#add:hover{
+    transition: ease all 0.5s;
+    transform: rotateZ(180deg);
+    opacity: 0.8;
+}

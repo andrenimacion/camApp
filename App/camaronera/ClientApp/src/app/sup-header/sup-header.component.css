@@ -1,0 +1,28 @@
+#sup-header {
+    height: 50px;
+    background-color: steelblue;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+}
+
+#saludo{
+  margin-top: 15px;
+}
+
+#subMenu{
+  width: 200px;
+  height: auto;
+  padding: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: steelblue;
+  color: whitesmoke;
+  position:absolute;
+}
+
+a{
+  color: whitesmoke;
+}

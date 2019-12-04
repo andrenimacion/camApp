@@ -1,0 +1,16 @@
+<div class="container-fluid" id="sup-header">
+  <button class="btn btn-outline-light mr-4" (click)="subMenu=!subMenu"> <span class="fa fa-cog mr-3"></span>Configuración</button>
+  <p id="saludo">Hola {{ env.nameUser }}</p>
+</div>
+
+<div id="subMenu" *ngIf="subMenu">
+  <a class="itemsSubMenu" href="#">Mi Cuenta</a>
+  <a class="itemsSubMenu" href="#">Personalización</a>
+  <input type="submit"
+         value="Cerrar Sesión"
+         id="loginButton"
+         name="submit"
+         class="btn btn-primary mt-3 mb-3"
+         (click)="logOut()">
+
+</div>
