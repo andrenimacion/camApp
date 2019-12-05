@@ -1,1 +1,4 @@
-<app-boton-camaronera></app-boton-camaronera>
+<div *ngFor="let dCam of dbCam" id="contCam">
+  <app-boton-camaronera></app-boton-camaronera>
+  <p id="">{{ dCam.nombre }}</p>
+</div>

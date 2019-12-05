@@ -38,14 +38,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\Models\Dp13a110.ts" />
     <None Remove="ClientApp\src\Models\webUser.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\Servicios\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\Models\Dp13a110.ts" />
     <TypeScriptCompile Include="ClientApp\src\Models\webUser.ts" />
   </ItemGroup>
 
