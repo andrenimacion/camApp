@@ -6,21 +6,44 @@
     align-items: center;
 }
 
-#saludo{
+#nameEmpresa{
+    width: 45%;
+}
+
+#nameUserGet {
+  width: 30%;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+
+#buttonSettings {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+#date{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#saludo {
   margin-top: 15px;
 }
 
-#subMenu{
+#subMenu {
   width: 200px;
   height: auto;
   padding: 15px;
-  border-bottom-right-radius: 15px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: steelblue;
+  background-color: rgba(0, 114, 156, 0.8 );
   color: whitesmoke;
-  position:absolute;
+  position: absolute;
+  z-index: 200;
 }
 
 a{

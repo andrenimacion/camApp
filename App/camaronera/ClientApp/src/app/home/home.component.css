@@ -1,1 +1,14 @@
+#containerAllcam {
+  padding: 10px;
+  display: flex;
+}
 
+#containerCamaroneras{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

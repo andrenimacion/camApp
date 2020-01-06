@@ -41,7 +41,6 @@ namespace camaronera.Controllers
         [Route("login")]
         public async Task<IActionResult> Login([FromBody] WebUser userInfo)
         {
-            
             var result = await _context.WebUser.FirstOrDefaultAsync(x =>
                                 x.WebUsu == userInfo.WebUsu && x.WebPass == userInfo.WebPass);
 

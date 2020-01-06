@@ -18,6 +18,7 @@
     "@angular/core": "6.1.10",
     "@angular/forms": "6.1.10",
     "@angular/http": "6.1.10",
+    "@angular/material": "^8.2.3",
     "@angular/platform-browser": "6.1.10",
     "@angular/platform-browser-dynamic": "6.1.10",
     "@angular/platform-server": "6.1.10",
@@ -29,6 +30,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "3.3.1",
     "popper.js": "^1.14.3",
+    "print-js": "^1.0.63",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },

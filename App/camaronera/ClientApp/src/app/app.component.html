@@ -1,8 +1,12 @@
 <body>
-  <app-sup-header *ngIf="env.header"></app-sup-header >
-    <div class="container-fluid" id="container-body">
-        
-        <router-outlet></router-outlet>
+  <app-sup-header *ngIf="env.header"></app-sup-header>
+  <div class="container-fluid" id="container-body" [style.height.px]="screeHeight">
+
+    <router-outlet></router-outlet>
+
+    <div id="helper" *ngIf="env.header">
+
     </div>
-    
+  </div>
+
 </body>

@@ -7,9 +7,15 @@ import { WebuserService } from 'src/Servicios/webuser.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
   title = 'app';
   env = environment;
+  
+  screeHeight: Number = (screen.height) - 111;
+  screen() {
+    console.log(this.screeHeight);
+  }
 
   constructor(public userService: WebuserService) { }
 
@@ -19,4 +25,8 @@ export class AppComponent implements OnInit {
       this.env.nameUser = localStorage.getItem("token");
     }
   }
+
+  
+
+
 }

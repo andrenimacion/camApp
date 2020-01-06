@@ -1,0 +1,90 @@
+import { Data } from "@angular/router";
+
+export interface Idp03a110 {
+
+/*
+id?: number;
+cod_cam: string;
+nombre: string;
+numpis: number;
+tothect: number;
+estado: string;*/
+
+  id?: number;
+  pc_ncta?: string;
+  pc_ncta2?: string;
+  pc_ncta3?: string;
+  no_parte?: string;
+  codinter?: string;
+  nombre?: string;
+  presentacion2?: string;
+  aplica?: string;
+  codbarra?: string;
+  tipo?: string;
+  modelo?: string;
+  proveedor?: string;
+  clase?: string;
+  subclase?: string;
+  origen?: string;
+  marca?: string;
+  desunidad?: string;
+  factor?: number;
+  desfactor?: string;
+  ubica?: string;
+  vstock?: string;
+  iva_sn?: string;
+  exmin?: number;
+  exmax?: number;
+  v_ultcom?: number;
+  f_ultcom?: number;
+  v_ultven?: number;
+  f_ultven?: number;
+  pvpc1?: number;
+  pvpc2?: number;
+  pvpc3?: number;
+  pvpc4?: number;
+  pvpu1?: number;
+  pvpu2?: number;
+  desunidad2?: string;
+  hasta2?: number;
+  pvpu3?: number;
+  desunidad3?: string;
+  hasta3?: number;
+  pvpu4?: number;
+  desunidad4?: string;
+  hasta4?: number;
+  pvpu5?: number;
+  desunidad5?: string;
+  hasta5?: number;
+  pvpc5?: number;
+  imagen?: string;
+  pesocaja?: number;
+  modipvp?: boolean;
+  modidescri?: boolean;
+  pordes?: number;
+  comenta?: string;
+  estado?: string;
+  cubicau?: number;
+  cubicac?: number;
+  color?: string;
+  talla?: string;
+  lasting?: string;
+  cantini?: number;
+  costini?: number;
+  ultcompra?: number;
+  costo_alor?: number;
+  c_ultcom?: number;
+  cantini2?: number;
+  fecha_crea?: Date;
+  fecha_modi?: Date;
+  ult_prv?: string;
+  fecha_ve1?: Date;
+  fecha_ve2?: Date;
+  pideser?: boolean;
+  es_precio?: boolean;
+  imagen2?: string;
+  motor?: string;
+  anio?: string;
+  acceso?: string;
+ 
+}

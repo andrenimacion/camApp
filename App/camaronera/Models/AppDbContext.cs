@@ -16,10 +16,16 @@ namespace camaronera.Models
 
         public DbSet<WebUser> WebUser { get; set; }
         public DbSet<Dp13a110> Dp13a110 { get; set; }
+        public DbSet<Dp03a110> Dp03a110 { get; set; }
+        public DbSet<Dp03a130> Dp03a130 { get; set; }
+        public DbSet<Dpinvcab> Dpinvcab { get; set; }
+        public DbSet<Dp03amov> Dp03amov { get; set; }
 
-        internal Task FirstOrDefaultAsync(Func<object, object> p)
-        {
-            throw new NotImplementedException();
-        }
+
+
+        //internal Task FirstOrDefaultAsync(Func<object, object> p)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

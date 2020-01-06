@@ -1,0 +1,524 @@
+#exampleModalScrollableTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+#cabeceraTitle{
+    width: 100%;
+    padding: 10px;
+    background-color: steelblue;
+}
+
+.data {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tdp{
+    color: white;
+}
+
+#bottonsContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+#buttosSecond {
+  display: flex;
+  justify-content: space-between;
+}
+
+#fecha {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 0.5px white;
+  color: white;
+}
+
+#historyMuestreo {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#contProductos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#groupListUl{
+    z-index: 19;
+}
+
+#conttablares {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+#buttonConfigur {
+  width: auto;
+  height: auto;
+  padding: 15px;
+  background-color: rgba(14, 24, 30, 0.7);
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 65%;
+  transition: ease all 0.5s;
+}
+
+  #buttonConfigur:hover {
+    transition: ease all 0.5s;
+    background-color: rgba(0, 116, 185, 0.7);
+    width: 100px;
+    cursor: pointer;
+  }
+
+#nameCamaroneras {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  margin-right: 15px;
+}
+
+#infoEnply{
+    margin-right: 15px;
+}
+
+#headerSup {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.contCorrida {
+  width: 175px;
+  background-color: rgba(14, 24, 30, 0.7);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+#containerCorrida{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.resTablaDataCam {
+  color: white;
+}
+
+.note{
+    font-size: 12pt;
+}
+
+.resTablaDataPes {
+  color: white;
+}
+
+.resTablaDataProm {
+  color: white;
+}
+
+.outPout{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24pt;
+    margin-left: 10px;
+}
+
+#tabHead {
+  background-color: rgba(0, 71, 114, 0.8);
+}
+
+th{
+    border: none; 
+}
+
+#tableResumen {
+  width: 49%;
+  padding: 10px;
+}
+
+.resTabla {
+  color: white;
+}
+td{
+    text-align: center;
+}
+
+#tags {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  color: gray;
+}
+
+#interfazEdicion{
+ 
+    width: auto;
+    display: flex;
+    justify-content: stretch;
+
+
+}
+
+#titleMuestreo {
+  color: gray;
+  font-size: 18pt;
+  font-family: 'Anton', sans-serif;
+}
+
+.showDataInputs {
+  border: solid 1px aqua;
+  background-color: aliceblue;
+  border-radius: 10px;
+  width: 350px;
+  height: auto;
+  box-shadow: 0px 0px 15px #07002E;
+}
+
+
+.titleDat {
+  width: 120px;
+  font-weight: bold;
+  font-size: 14pt;
+  color: #28272E;
+}
+
+.dataMu{
+    width: 160px;
+    color: steelblue;
+}
+
+.titleDatain {
+  width: 100%;
+}
+
+#resultadosCont{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#resultados {
+  display: flex;
+  justify-content: stretch;
+  font-family: 'oswald';
+  font-size: 20pt;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  font-size: 15pt;
+  cursor: pointer;
+  background-color: #444444;
+  color: white;
+  transition: ease all 0.6s;
+  box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
+}
+
+h3{
+    color: white;
+    font-size: 12pt;
+}
+
+#fechaInput{
+    padding: 20px;
+}
+
+.button:hover {
+  transition: ease all 0.3s;
+  border: solid 2px gray;
+  box-shadow: 0px 0px 6px rgba(76, 195, 222,0.8);
+  transform: scale(1.5);
+}
+
+.ted {
+  background-color: #DEF6FF;
+}
+
+#guardarForm{
+    background-color: orange;
+}
+
+.note {
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 8pt;
+  color: aqua;
+  margin-right: 10px;
+}
+
+.notes {
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 10pt;
+  color: aqua;
+  margin-right: 10px;
+}
+
+#formulario{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#buttonSave{
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+}
+
+#search {
+  width: 100%;
+}
+
+.inputsBox{
+    width: 20%;
+    height: auto;
+}
+
+@media(max-width: 800px){
+  .inputsBox {
+    width: 48%;
+    height: auto;
+  }
+}
+
+#options{
+    height: 100px;
+    padding-top: 15px;
+    background-color: steelblue;
+    color: aquamarine;
+    border: none;
+}
+
+@media(max-width: 450px) {
+  .inputsBox {
+    width: 100%;
+    height: auto;
+  }
+}
+.regiterInputs {
+  padding: 10px;
+  background-color: transparent;
+  color: whitesmoke;
+  font-family: 'Roboto Condensed', sans-serif;
+  border: none;
+  width: 100%;
+  border-bottom: solid 0.5px white;
+}
+
+#buttonEdits {
+  background-color: none;
+}
+
+#createAndDelate {
+  display: flex;
+  cursor: pointer;
+  border-radius: 100%;
+
+  height: 40px;
+}
+#tabla {
+  width: 100%;
+}
+
+
+
+
+  #cod {
+    padding: 20px;
+    width: 100px;
+  }
+
+
+th {
+  height: 50px;
+  font-size: 10pt;
+  color: steelblue;
+  text-align: center;
+}
+
+input{
+    text-align: center;
+}
+
+.inputs {
+  background-color: transparent;
+  border: solid 0px gray;
+  padding: 5px;
+  color: aquamarine;
+  width: 100%;
+  font-size: 9pt;
+  border-bottom: solid 0.5px whitesmoke;
+  text-align: center;
+}
+  .inputs:hover {
+    border: solid 0px gray;
+  }
+
+  #mas {
+  background-color: steelblue;
+  color: whitesmoke;
+  width: auto;
+  border-bottom-right-radius: 8px;
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: ease all 0.8s;
+}
+
+#mas:hover{
+    transition: ease all 0.8s;
+    background-color: #444444;
+    color: aqua;
+}
+
+
+#transacciones{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#trans {
+  width: 30%;
+  display: block;
+}
+
+  #observ{
+      width: 60%;
+      display:block;
+  }
+
+/*PISCINAS INICIO*/
+
+#modalContainer {
+  background: rgb(42, 18, 48);
+  background: linear-gradient(125deg, rgba(42, 18, 48, 1) 0%, rgba(50, 44, 125, 1) 55%, rgba(67, 173, 226, 1) 100%);
+  
+}
+
+#bgModal{
+  position: absolute;
+  width: 100%;
+  height:50%;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.modal-title {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+#atras{
+    width: 25px;
+    height: auto;
+}
+
+.arrow{
+    width: 25px;
+    height: auto;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: ease all 0.5s;
+}
+
+  .arrow:hover {
+    transition: ease all 0.5s;
+    opacity: 1;
+  }
+
+.modal-body {
+  height: auto;
+  padding: 12px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#piscinasContainer {
+    width: 25%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+}
+.piscinasA {
+  transition: ease all 1s;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url('../../assets/icon/piscinas.png');
+  background-repeat: no-repeat;
+  background-size: 70% auto;
+  background-position: 15px 15px;
+  transition: ease all 1s;
+}
+
+  .piscinasA:hover {
+    transition: ease all 1s;
+    transform: scale(0.9, 0.9);
+    box-shadow: 0px 0px 20px aqua;
+    border: solid 1px aqua;
+  }
+
+.piscinasB {
+  transition: ease all 1s;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/icon/piscinas.png');
+  background-repeat: no-repeat;
+  background-size: 70% auto;
+  background-position: 15px 15px;
+}
+
+  .piscinasB:hover {
+    transition: ease all 0.8s;
+    background-color: #444444;
+    transform: scale(1.5, 1.5);
+    opacity:0;
+  }
+
+
+small {
+  color: aquamarine;
+  font-family: 'Sulphur Point', sans-serif;
+}
+
+/*PISCINAS FIN*/

@@ -1,0 +1,93 @@
+h2 {
+  color: white;
+  font-family: 'Sulphur Point', sans-serif;
+}
+hr{
+    border: solid 1px aqua ;
+}
+
+#fechas {
+  color: white;
+  background-color: cornflowerblue;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 25px;
+  width: 200px;
+  padding-left: -25px;
+  height: 460px;
+}
+
+  #fechas::-webkit-scrollbar-thumb {
+    background: rgba(0,8,23,1);
+    background: -moz-linear-gradient(top, rgba(0,8,23,1) 0%, rgba(0,101,148,1) 22%, rgba(0,43,128,1) 58%, rgba(0,101,148,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,8,23,1)), color-stop(22%, rgba(0,101,148,1)), color-stop(58%, rgba(0,43,128,1)), color-stop(100%, rgba(0,101,148,1)));
+    background: -webkit-linear-gradient(top, rgba(0,8,23,1) 0%, rgba(0,101,148,1) 22%, rgba(0,43,128,1) 58%, rgba(0,101,148,1) 100%);
+    background: -o-linear-gradient(top, rgba(0,8,23,1) 0%, rgba(0,101,148,1) 22%, rgba(0,43,128,1) 58%, rgba(0,101,148,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,8,23,1) 0%, rgba(0,101,148,1) 22%, rgba(0,43,128,1) 58%, rgba(0,101,148,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000817', endColorstr='#006594', GradientType=0 );
+  }
+
+#headerInputs{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+  label{
+      font-size: 12pt;
+      color: white;
+  }
+
+table {
+  text-align: center;
+  width: 100%;
+  font-family: 'Anton', sans-serif;
+}
+
+.promedio{
+    color: aqua;
+}
+
+li {
+  list-style: none;
+  color: white;
+}
+ul{
+    padding: 0px;
+}
+
+
+#contSectionH{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+td,th{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+}
+
+.inputDate {
+  margin: 10px;
+  color: white;
+  background-color: transparent;
+  text-align: center;
+  border: none;
+  outline: none !important;
+  border-bottom: solid 0.5px white;
+}
+
+
+#reportes {
+  width: 100%;
+  overflow-y: auto;
+}

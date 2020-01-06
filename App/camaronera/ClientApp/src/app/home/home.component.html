@@ -1,4 +1,13 @@
-<div *ngFor="let dCam of dbCam" id="contCam">
-  <app-boton-camaronera></app-boton-camaronera>
-  <p id="">{{ dCam.nombre }}</p>
+<div id="containerAllcam" class="container-fluid">
+
+  <div id="containerCamaroneras" >
+    <div *ngFor="let dCam of dbCam" id="contCam" class="animated bounceIn slow">
+      <app-boton-camaronera (click)="showtabla([dCam.cod_cam],[dCam.nombre]);"></app-boton-camaronera>
+      <p id=""
+      style="color: white; text-align: center; font-family: 'Oswald', sans-serif;">
+      {{ dCam.nombre }}
+      </p>
+    </div>
+  </div>
+
 </div>

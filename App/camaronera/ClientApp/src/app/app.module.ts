@@ -13,6 +13,10 @@ import { LogotipoComponent } from './logotipo/logotipo.component';
 import { SupHeaderComponent } from './sup-header/sup-header.component';
 import { BotonCamaroneraComponent } from './boton-camaronera/boton-camaronera.component';
 
+import { MuestreoComponent } from './muestreo/muestreo.component';
+import { HistoryComponent } from './history/history.component';
+import { AnimLogoComponent } from './anim-logo/anim-logo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +24,10 @@ import { BotonCamaroneraComponent } from './boton-camaronera/boton-camaronera.co
     LoginComponent,
     LogotipoComponent,
     SupHeaderComponent,
-    BotonCamaroneraComponent
+    BotonCamaroneraComponent,
+    MuestreoComponent,
+    HistoryComponent,
+    AnimLogoComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -30,7 +37,10 @@ import { BotonCamaroneraComponent } from './boton-camaronera/boton-camaronera.co
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent},
-      { path: 'login', component: LoginComponent },
+      { path: 'login', component: LoginComponent },       
+      { path: 'muestreo', component: MuestreoComponent },
+      { path: 'history', component: HistoryComponent },
+
       { path: '**', pathMatch: 'full', redirectTo:'home'  },
     ])
   ],

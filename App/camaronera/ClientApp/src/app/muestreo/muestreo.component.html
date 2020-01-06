@@ -1,0 +1,440 @@
+<!-- MODAL FIN -->
+
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="exampleModalScrollableTitle" style="color: gray;">
+          <div>
+            <strong>{{ env.nameCam }} | {{ env.nameUser }}</strong><hr />
+          </div>
+          <div>Piscina Nº:{{ piscinaHead }}</div>
+          <div>Fecha: {{ fechaInitHead }}</div>
+      </div>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+      <div class="modal-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Camarones</th>
+              <th scope="col">Peso Total</th>
+              <th scope="col">Promedio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dbinfo of paramReport">
+              <th scope="row">{{ dbinfo.camaron }}</th>
+              <td>{{ dbinfo.lbrastotal }}</td>
+              <td>{{ dbinfo.pesoprom | number: '1.1' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Imprimir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="bottonsContainer">
+  <div id="atras" class="atras mb-4" (click)="regresar()">
+    <img src="../../assets/icon/arrow.png" class="arrow" alt="arrow" />
+  </div>
+
+  <div id="buttosSecond">
+    <button class="btn btn-primary mt-2" (click)="guardarDB()">
+      <span class="icon-file-archive"></span>
+      Guardar
+    </button>
+    <button class="btn btn-warning mt-2"
+            (click)="verErrores()"
+            data-toggle="modal" data-target="#exampleModalScrollable">
+      <span class="icon-zoom-in-3"></span>
+      Informe
+    </button>
+  </div>
+</div>
+
+<!--<div id="headerSup">
+
+
+  <div id="nameCamaroneras" class="nameCamaron p-3" style="color: white; font-size: 20pt; font-family: 'Oswald', sans-serif;">
+
+    <div id="infoEnply">
+      <p style="color: bisque; font-size: 20pt;">MUESTREO | OSTRATEK</p>
+      <hr style="border: solid 1px whitesmoke;" />
+
+    </div>-->
+<!--<div class="contCorrida p-2" style="text-align: right; ">
+  <label for="corrida" style="font-family: 'Oswald', sans-serif; color: white; font-size: 13pt;">Número de Corrida:</label>
+  <input type="number" #corrida [(ngModel)]="_corrida" name="corrida" class="regiterInputs" />
+  <p class="note mt-2">
+    Seleccione el número de corrida a realizar
+    para este muestreo.
+  </p>
+</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div id="buttonConfigur">
+  <span class="icon-pencil" style="color: white; font-size: 18pt; display: flex; justify-content: center; cursor: pointer; margin-top: 15px;"></span>
+  <p style="color: white; cursor: pointer;">Editar</p>
+</div>-->
+<div id="fechaInput">
+  <h3>Ingrese la Fecha:</h3>
+  <br />
+  <input type="date" id="fecha" name="fechaIngreso"
+         [(ngModel)]="_fechaIngreso"
+         #fecha
+         style="font-size: 12pt;
+         width: 20%;"
+         (focus)="focusEventA()"
+         (keyup.enter)="focusNext(piscinaX)" />
+</div>
+<div class="container" id="containerCorrida">
+
+  <div id="tabla" class="container-fluid mt-4 animated fadeInUp fast">
+
+    <table style="width: 100%;">
+
+      <thead class="ted">
+        <tr>
+          <th scope="col" id="cod">Código</th>
+          <th scope="col">Descripción</th>
+          <th scope="col" id="pis">Piscina</th>
+          <th scope="col" id="pis">Corrida</th>
+          <!--<th scope="col" id="pis">Corrida</th>-->
+
+          <th scope="col">Camarones</th>
+          <th scope="col">Peso/Total</th>
+          <th scope="col">Promedio</th>
+          <th scope="col">Talla</th>
+
+          <!--<th scope="col" id="nt">N./ Talla</th>-->
+
+          <th scope="col" class="buttonEdits"></th>
+
+          <th scope="col" class="buttonEdits"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            <input type="text"
+                   style="font-size: 12pt; color: aquamarine; background-color: #00212E;"
+                   [(ngModel)]="_codigo" name="codigo"
+                   (focusout)="getCodigo()"
+                   #codigo
+                   class="regiterInputs" />
+            <!--tp.codigo-->
+          </th>
+          <td style="color: navajowhite; width: 300px; ">
+            <input type="text" #descripcion
+                   [(ngModel)]="_descripcion"
+                   name="descripcion"
+                   style="font-size: 12pt;
+                    border: none;
+                    border-bottom: solid 0.5px white;
+                    color: aquamarine;
+                    background-color: #00212E;"
+                   placeholder="Descripción"
+                   class="regiterInputs"
+                   disabled />
+            <!--tp.descripcion-->
+          </td>
+          <td style="color: navajowhite;">
+            <input type="text"
+                   [(ngModel)]="_piscina"
+                   #piscina
+                   name="piscina"
+                   placeholder="Selecciona la Piscina"
+                   class="regiterInputs"
+                   data-toggle="modal"
+                   data-target="#exampleModal" style="cursor: pointer;"
+                   (keyup.enter)="focusNext(corridaX)"
+                   (focusout)="anidCodec()"/>
+            <!--tp.piscina-->
+          </td>
+          <td style="color: navajowhite;">
+            <input type="text"
+                   (keyup.enter)="focusNext(camaronesX)"
+                   #corrida
+                   [(ngModel)]="_corrida"
+                   name="corrida"
+                   class="regiterInputs" />
+            <!--tp.camarones-->
+          </td>
+          <td style="color: navajowhite;">
+            <input type="number"
+                   #camarones
+                   [(ngModel)]="_camarones"
+                   name="camarones"
+                   placeholder="Camarones"
+                   class="regiterInputs"
+                   (keyup.enter)="focusNext(pesoX)" />
+            <!--tp.camarones-->
+          </td>
+          <td style="color: navajowhite;">
+            <input type="number"
+                   #peso
+                   [(ngModel)]="_peso"
+                   name="peso"
+                   (focusout)="promedioCam()"
+                   (keyup.enter)="promedioCam()"
+                   placeholder="peso"
+                   class="regiterInputs" />
+            <!--tp.peso-->
+          </td>
+          <td style="color: navajowhite;">
+            <input type="number"
+                   #promedio
+                   [(ngModel)]="_promedio"
+                   name="promedio"
+                   placeholder="Promedio"
+                   (focusout)="saveItem()"
+                   (keyup.enter)="focusEventB(piscinaX)"
+                   class="regiterInputs"
+                   style="border: none;" />
+            <!--tp.promedio-->
+          </td>
+          <td style="color: navajowhite;">
+            <input type="text"
+                   #talla
+                   [(ngModel)]="_talla"
+                   name="talla"
+                   placeholder="Talla"
+                   class="regiterInputs"
+                   disabled style="border: none; " />
+            <!--tp.talla-->
+          </td>
+          <!--<td style="color: navajowhite;">tp.nTalla</td>-->
+
+
+        </tr>
+        <tr *ngFor="let tp of aTempo; let i = index" class="ted animated fadeInDown fast">
+
+          <th scope="row">{{ tp.codigo }}</th>
+          <td style="width: 300px;">{{ tp.descripcion}}</td>
+          <td>{{ tp.piscina }}</td>
+          <td>{{ tp.corrida }}</td>
+          <td>{{ tp.camarones }}</td>
+          <td> {{ tp.peso}} </td>
+          <td>{{ tp.promedio }}</td>
+          <td>{{ tp.talla }}</td>
+          <td>
+            <div id="interfazEdicion">
+              <div class="button" (click)="editItem(i)">
+                <span class="icon-edit-3"></span>
+              </div>
+              <div class="button" (click)="deletItem(i)">
+                <span class="icon-trash-1"></span>
+              </div>
+            </div>
+          </td>
+
+        </tr>
+      </tbody>
+
+      <!-- *ngFor="let tp of aTempo; let i = index" -->
+    </table>
+    <div id="resultadosCont" class="container  mt-3" style="color: white;">
+      <div id="resultados">
+        <p class="notes">Tot./Cam.:</p>
+        <br />
+        <p style="text-shadow: 2px 3px 8px rgba(0, 18, 22, 0.7 );">{{sumaCamaron}}</p>
+        <p class="notes">Tot./Peso.:</p>
+        <br />
+        <p style="text-shadow: 2px 3px 8px rgba(0, 18, 22, 0.7 );">{{sumPeso}}</p>
+        <p class="notes">Tot./Prom.:</p>
+        <br />
+        <p style="text-shadow: 2px 3px 8px rgba(0, 18, 22, 0.7 );">{{promeGeneral | number: '1.1'}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!--<div *ngIf="lNew" id="formulario" class="animated fadeInDown fast">
+  <div class="inputsBox">
+    <label for="codigo" class="note">Código del producto:</label>
+    <select type="text"
+            [(ngModel)]="_codigo" name="codigo" placeholder="Código"
+            (focusout)="getCodigo()"
+            (keyup.enter)="getCodigo()" class="regiterInputs">
+      <option id="options">CAMENG</option>
+    </select>
+    <label for="descripcion" class="note">Descripción:</label>
+    <input type="text" [(ngModel)]="_descripcion" name="descripcion" placeholder="Descripción" class="regiterInputs" disabled />
+  </div>
+  <div class="inputsBox">
+    <label for="camarones" class="note">Camarones:</label>
+    <input type="number"
+           [(ngModel)]="_camarones"
+           name="camarones"
+           placeholder="Camarones"
+           class="regiterInputs" />
+
+    <label for="peso" class="note">Peso:</label>
+    <input type="number"
+           [(ngModel)]="_peso"
+           name="peso"
+           (focusout)="promedioCam()"
+           (keyup.enter)="promedioCam()"
+           placeholder="peso"
+           class="regiterInputs" />
+  </div>
+  <div class="inputsBox">
+    <label for="promedio" class="note">Promedio:</label>
+    <input type="number"
+           [(ngModel)]="_promedio"
+           name="promedio"
+           placeholder="Promedio"
+           class="regiterInputs"
+           disabled />
+
+    <label for="talla" class="note">Talla:</label>
+    <input type="text"
+           [(ngModel)]="_talla"
+           name="talla"
+           placeholder="Talla"
+           class="regiterInputs"
+           disabled />
+  </div>
+  <div class="inputsBox">
+    <label for="talla" class="note">Nombre de Talla:</label>
+    <input type="text"
+           [(ngModel)]="_nTalla"
+           name="nTalla"
+           placeholder="Nombre de Talla"
+           class="regiterInputs" />
+
+    <label for="talla" class="note">Piscina:</label>
+    <input type="text"
+           [(ngModel)]="_piscina"
+           name="piscina"
+           placeholder="Piscina"
+           class="regiterInputs"
+           data-toggle="modal"
+           data-target="#exampleModal" />
+  </div>
+
+</div>-->
+<!--<div id="conttablares"  class="container-fluid mt-4 mb-4">
+  <div id="historyMuestreo">
+
+    <div class="card mb-3 animated fadeInLeft fast" style="width: 13rem;" *ngFor="let tp of aTempo; let i = index">
+      <div id="interfazEdicion">
+        <div class="button" (click)="editItem(i)">
+          <span class="icon-edit-3"></span>
+        </div>
+        <div class="button" (click)="deletItem(i)" style="z-index: 20;">
+          <span class="icon-trash-1"></span>
+        </div>
+      </div>
+      <div class="card-header" style="font-family: 'Bebas Neue', cursive; font-size: 15pt;">
+        Muestreo
+      </div>
+      <ul class="list-group list-group-flush" id="groupListUl">
+        <li class="list-group-item" style="z-index: 17;">Descripción: tp.descripcion </li>
+        <li class="list-group-item" style="z-index: 17;">Piscina: tp.piscina </li>
+        <li class="list-group-item" style="z-index: 17;">Cant. Camarones: tp.camarones </li>
+        <li class="list-group-item" style="z-index: 17;">Peso Camarones (.gr): tp.peso </li>
+        <li class="list-group-item" style="z-index: 17;">Promedio (.gr): tp.promedio </li>
+        <li class="list-group-item" style="z-index: 17;">Talla (.gr):  tp.talla </li>
+      </ul>
+    </div>
+  </div>-->
+<!--<div class="container-fluid" id="tags" *ngIf="false">
+
+    <section class="showDataInputs m-4 p-4 animated fadeInLeft fast"
+             *ngFor="let tp of aTempo; let i = index">
+
+      <div class="titleDataIn">
+        <p id="titleMuestreo"></p>
+        <h5>  </h5>
+        <hr />
+      </div>
+      <div id="descripcion" class="Data">
+        <div class="titleDat">Descripción:</div><div class="dataMu"></div>
+      </div>
+      <div id="piscina" class="Data">
+        <div class="titleDat"> Psicina:</div><div class="dataMu"></div>
+      </div>
+      <div id="camarones" class="Data">
+        <div class="titleDat"> Cant. Camarones: </div><div class="dataMu"></div>
+      </div>
+      <div id="pesoCam" class="Data">
+        <div class="titleDat"> Peso Camarones (.gr): </div><div class="dataMu"></div>
+      </div>
+      <div id="promedio" class="Data">
+        <div class="titleDat"> Promedio (.gr): </div><div class="dataMu"></div>
+      </div>
+      <div id="talla" class="Data">
+        <div class="titleDat"> Talla (.gr): </div><div class="dataMu"></div>
+      </div>
+    </section>
+  </div>
+</div>-->
+<!--<div id="tableResum">
+  <table class="table" id="tableResumen">
+    <thead id="tabHead">
+      <tr>
+        <th scope="col" class="resTabla">Camarones</th>
+        <th scope="col" class="resTabla">Peso/Total</th>
+        <th scope="col" class="resTabla">Promedio</th>
+      </tr>
+    </thead>
+    <tbody id="tebody">
+      <tr *ngFor="let tp of aTempo; let i = index" class="animated fadeInLeft fast">
+        <td class="resTablaDataCam"> tp.camarones </td>
+        <td class="resTablaDataPes"> tp.peso </td>
+        <td class="resTablaDataProm"> tp.promedio </td>
+      </tr>
+
+      <tr>
+        <td class="outPout"><p class="note">Tot./Cam.:</p> sumaCamaron </td>
+        <td class="outPout"><p class="note">Tot./Peso.:</p> sumPeso </td>
+        <td class="outPout"><p class="note">Tot./Prom.:</p> promeGeneral | number: '1.1' </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="modalContainer">
+      <img src="../../assets/icon/bg2_modal.png" id="bgModal" />
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Selecciona tus piscinas <small>Camaronera: {{ env.nameCam }} </small></h5>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="z-index: 4;">
+          <span aria-hidden="true" style="color: whitesmoke;">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="z-index: 5;">
+
+        <div id="piscinasContainer" class="container" *ngFor="let dPis of dbPis" style="z-index: 6;">
+
+          <div class="piscinasA" (click)="getPis(dPis.codigo)" data-dismiss="modal">
+            <div class="piscinasB">
+
+            </div>
+            <p style="color: aquamarine; font-size: 8pt;"> {{ dPis.codigo + ' / ' + dPis.nombre }} </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

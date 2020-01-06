@@ -13,6 +13,9 @@ import { environment } from 'src/environments/environment';
 })
 export class LoginComponent implements OnInit {
 
+  passwordType: string = 'password';
+  passwordShow: boolean = false;
+
   public _Iuser: Iwebuser = { webUsu: "", webPass: "" };
   env = environment;
 
@@ -35,5 +38,18 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('tokenExpiration', "Falta para token");
         this.router.navigate(['\home']);
       }, err => alert("Clave incorrecta"));
-  }  
+  }
+
+  passwordHidShow() {
+    console.log('activado');
+    if (!this.passwordShow) {
+      this.passwordShow = true;
+      this.passwordType = 'text';
+    }
+    else {
+      this.passwordShow = false;
+      this.passwordType = 'password';
+    }
+  }
+
 }

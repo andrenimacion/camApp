@@ -1,0 +1,65 @@
+
+<div class="container-fluid" id="header">
+  <h2><span class="icon-calendar-inv"></span>HISTORIAL DE MUESTREOS</h2>
+  <div id="button">
+    <button class="btn btn-primary ml-3 mr-3" (click)="showData()" (keyup.enter)="showData()">
+      <span class="icon-archive-2 mr-3"></span>Mostrar Datos
+    </button>
+    <button class="btn btn-secondary">
+      <span class="icon-print-3 mr-3"></span>Imprimir
+    </button>
+  </div>
+
+</div>
+<hr />
+<section id="contSectionH" class="container-fluid">
+  <!--  <div id="fechas" >
+      <ul >
+        <li *ngFor="let ar of arraHist">
+          <span class="icon-history"></span>
+          <label>
+            {ar.fecha_tra  | date:'shortDate'}}  |  {ar.tipo }}:   {ar.numero }}
+          </label>
+          <hr style="border: solid 0.5px white; " />
+        </li>
+      </ul>
+    </div>-->
+
+  <div id="reportes">
+    <div id="headerInputs">
+      <label for="inputAD">Fecha Inicio:</label>
+      <input type="date" id="inputAD" class="inputDate" [(ngModel)]="_dateA" />
+      <label for="inputAB">Fecha Fin:</label>
+      <input type="date" id="inputAB" class="inputDate" [(ngModel)]="_dateB" />
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">FECHA</th>
+          <th scope="col">TRANSACCIÓN</th>
+          <th scope="col">No./TRANSACCIÓN</th>
+          <th scope="col">CORRIDA</th>
+          <th scope="col">PESO CAMARONES</th>
+          <th scope="col">PESO TOTAL</th>
+          <th scope="col">PROMEDIO</th>
+
+        </tr>
+      </thead>
+      <tbody class="table">
+        <tr *ngFor="let ar of arraHist" class="animated fadeInLeft fast">
+          <td class="infoDesc">{{ ar.fecha_tra | date:'shortDate' }}</td>
+          <td class="infoDesc">{{ ar.tipo }}</td>
+          <td class="infoDesc">{{ ar.numero }}</td>
+          <td class="infoDesc">{{ ar.corrida }}</td>
+          <td class="infoDesc">{{ ar.totCamaron }}</td>
+          <td class="infoDesc">{{ ar.lbrastotal }}</td>
+          <td class="promedio">{{ ar.lbrastotal / ar.totCamaron | number:'1.0'}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+  </div>
+
+</section>

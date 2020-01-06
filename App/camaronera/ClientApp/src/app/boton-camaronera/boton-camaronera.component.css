@@ -13,9 +13,12 @@
     padding-top: 25px;
 }
 
-#camCont{
-  border: solid 1px whitesmoke;
+#camCont { /*
+  border: solid 1px whitesmoke;*/
   padding: 5px;
+  width: auto;
+  height: 220px;
+  height: 220px;
 }
 
 #icon-cam {

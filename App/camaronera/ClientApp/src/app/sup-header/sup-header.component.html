@@ -1,16 +1,24 @@
 <div class="container-fluid" id="sup-header">
-  <button class="btn btn-outline-light mr-4" (click)="subMenu=!subMenu"> <span class="fa fa-cog mr-3"></span>Configuración</button>
-  <p id="saludo">Hola {{ env.nameUser }}</p>
+  <div id="nameUserGet">
+    <button id="buttonSettings" (click)="subMenu=!subMenu"> <span class="icon-cog-4 mr-3"></span></button>
+    <p id="saludo">Bienvenido: {{ env.nameUser }}</p>
+  </div>
+  <div id="nameEmpresa">
+    <strong>OSTRATEK</strong> | {{ env.nameCam }}
+  </div>
+  <div class="pull-right pl-4 d-flex align-items-center mt-3" id="date">
+    <p>{{ date() }}</p>
+  </div>
 </div>
 
 <div id="subMenu" *ngIf="subMenu">
-  <a class="itemsSubMenu" href="#">Mi Cuenta</a>
-  <a class="itemsSubMenu" href="#">Personalización</a>
+  <a class="itemsSubMenu"  (click)="historyRoute()">Muestreo Historial</a>
+  <a class="itemsSubMenu">Personalización</a>
   <input type="submit"
          value="Cerrar Sesión"
          id="loginButton"
          name="submit"
          class="btn btn-primary mt-3 mb-3"
          (click)="logOut()">
-
 </div>
+
